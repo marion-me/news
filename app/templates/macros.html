@@ -1,0 +1,55 @@
+{% macro displayNewsList(articles_list) %}
+
+<div class="container">
+{% for new in articles_list %}
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 card">
+        <p class="text-center">
+            <h3 class="text-center">{{new.title}}</h3>
+        </p>
+        <div class="card-body">
+            <p class="text-center">
+                {{new.description}}
+            </p>
+            <p class="text-center">
+                {{new.publishedAt}}
+            </p>
+            <p class="text-center">
+                {{new.content}}
+            </p>
+            <a href="{{new.url}}">
+                <button class="btn btn-link">read more</button>
+            </a>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endmacro %}
+
+{% macro displayNewsourceList(sources_list) %}
+
+    {% for new in sources_list %}
+<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 card">
+    <!-- <div class="card-group"> -->
+        <p class="text-center">
+            <a href="/articles/{{new.id}}">
+             <h3>{{new.name}}</h3>
+            </a>
+        </p>
+        <div class="card-body">
+            <p class="text-center">
+                {{new.description}}
+            </p>
+        </div>
+        <p class="text-center">
+            {{new.category}}
+        </p>
+        <!-- <a href="/articles/{{new.id}}"> -->
+            <!-- <button class="btn btn-primary">read article</button> -->
+        <!-- </a> -->
+        <a href="{{new.url}}">
+            <button class="btn btn-info">read more on {{new.name}}</button>
+        </a>
+    <!-- </div> -->
+</div>
+{% endfor %}
+{% endmacro %}
