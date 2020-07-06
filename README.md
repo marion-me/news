@@ -8,6 +8,7 @@
 
 **Setup of Application**
  You can clone the project from https://github.com/marionvutagwa/news
+ 
 **Known Bugs**
  No known bugs
 
