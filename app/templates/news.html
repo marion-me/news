@@ -1,0 +1,25 @@
+{% import 'macros.html' as macro%}
+
+
+    {% block content %}
+<!--CNN news-->
+<h3>CNN News</h3>
+<ul>
+    <li>{{ macro.displayNewsList(cnn)}}</li>
+</ul>
+<!--BBC News-->
+<!-- <h3>BBC News</h3>
+        <ul>
+            <li>{{macro.displayNewsList(bbc_news)}}</li>
+        </ul> -->
+<!--FOX News-->
+<!-- <h3>FOX News</h3>
+        <ul>
+            <li>{{macro.displayNewsList(fox_news)}}</li>
+        </ul> -->
+<!--France24 news-->
+<!-- <h3>France24 news</h3>
+        <ul>
+            <li>{{macro.displayNewsList(France24 news)}}</li>
+        </ul> -->        
+{% endblock %}
